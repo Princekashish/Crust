@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Chocolate Croissant",
+    "price": 2.5,
+    "img": "/birthday-cake-removebg-preview.png",
+    "rating": 4.7,
+    "discount": 0.5,
+    "description": "A flaky and buttery croissant filled with rich chocolate.",
+    "category": "Pastries"
+  },
+  {
+    "id": 2,
+    "name": "Blueberry Muffin",
+    "price": 1.75,
+    "img": "/Cake_Image.png",
+    "rating": 4.5,
+    "discount": 0.25,
+    "description": "Moist muffin packed with fresh blueberries and a hint of lemon.",
+    "category": "Pastries"
+  },
+  {
+    "id": 3,
+    "name": "Sourdough Bread",
+    "price": 5.0,
+    "img": "/cat (1).png",
+    "rating": 4.8,
+    "discount": 1.0,
+    "description": "Artisan sourdough with a crispy crust and tangy flavor.",
+    "category": "Breads"
+  },
+  {
+    "id": 4,
+    "name": "Carrot Cake",
+    "price": 3.5,
+    "img": "/cat (3).png",
+    "rating": 4.6,
+    "description": "Moist and spiced carrot cake topped with cream cheese frosting.",
+    "category": "Cakes"
+  },
+  {
+    "id": 5,
+    "name": "Vanilla Cupcake",
+    "price": 2.0,
+    "img": "/tran1 (1).png",
+    "rating": 4.4,
+    "discount": 0.5,
+    "description": "Light and fluffy vanilla cupcake with a rich buttercream frosting.",
+    "category": "Cakes"
+  },
+  {
+    "id": 6,
+    "name": "Almond Biscotti",
+    "price": 1.5,
+    "img": "/cat (2).png",
+    "rating": 4.5,
+    "description": "Crunchy almond biscotti, perfect for dipping in coffee.",
+    "category": "Pastries"
+  },
+  {
+    "id": 7,
+    "name": "Raspberry Danish",
+    "price": 2.75,
+    "img": "/tran1 (2).png",
+    "rating": 4.6,
+    "description": "Flaky pastry filled with sweet raspberry jam and cream cheese.",
+    "category": "Pastries"
+  },
+  {
+    "id": 8,
+    "name": "Cheese Bread",
+    "price": 3.0,
+    "img": "/tran1 (3).png",
+    "rating": 4.3,
+    "discount": 0.3,
+    "description": "Savory bread made with a blend of cheeses and herbs.",
+    "category": "Breads"
+  },
+  {
+    "id": 9,
+    "name": "Chocolate Cake",
+    "price": 4.0,
+    "img": "/tran1 (4).png",
+    "rating": 4.9,
+    "description": "Rich and moist chocolate cake layered with velvety chocolate frosting.",
+    "category": "Cakes"
+  },
+  {
+    "id": 10,
+    "name": "Cinnamon Roll",
+    "price": 2.25,
+    "img": "/tran1 (5).png",
+    "rating": 4.8,
+    "description": "Soft and gooey cinnamon rolls drizzled with sweet icing.",
+    "category": "Pastries"
+  },
+  {
+    "id": 11,
+    "name": "Espresso",
+    "price": 2.0,
+    "img": "/view-3d-coffee-cup.png",
+    "rating": 4.5,
+    "description": "Strong and bold shot of espresso for a quick caffeine boost.",
+    "category": "Drinks"
+  },
+  {
+    "id": 12,
+    "name": "Caramel Macchiato",
+    "price": 3.5,
+    "img": "/latte-coffee-cup.png",
+    "rating": 4.6,
+    "description": "Creamy vanilla latte topped with caramel drizzle.",
+    "category": "Drinks"
+  },
+  {
+    "id": 13,
+    "name": "Banana Bread",
+    "price": 3.25,
+    "img": "/delicious-glazed-doughnut.png",
+    "rating": 4.7,
+    "description": "Moist and flavorful banana bread, perfect for breakfast.",
+    "category": "Breads"
+  },
+  {
+    "id": 14,
+    "name": "Glazed Donut",
+    "price": 1.5,
+    "img": "/close-up-banana-bread.png",
+    "rating": 4.8,
+    "description": "Classic glazed donut, soft and sweet.",
+    "category": "Pastries"
+  },
+  {
+    "id": 15,
+    "name": "Chocolate Frosted Donut",
+    "price": 1.75,
+    "img": "/closeup-shot-slices-delicious-banana-bread-with-chocolate-chunks-walnut-plate.png",
+    "rating": 4.9,
+    "description": "Delicious donut topped with rich chocolate frosting.",
+    "category": "Pastries"
+  }
+]
