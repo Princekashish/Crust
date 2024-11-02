@@ -2,6 +2,7 @@ import { ArrowRight, Trash2 } from "lucide-react";
 import React, { useState } from "react";
 import ScrollTop from "../../utils/Scrolltop";
 import { useDispatch, useSelector } from "react-redux";
+import toast, { Toaster } from "react-hot-toast";
 import {
   selectCartTotal,
   productRemoveComplete,
@@ -14,18 +15,28 @@ export default function ViewCart() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const handleRemoveItem = (itemId) => {
+    toast.success("Item successfully removed", {
+      position: "bottom-center",
+    });
+
+    setTimeout(() => {  
+      dispatch(productRemoveComplete(itemId));
+    }, 500);
+  };
+
   // State to manage the delivery option
   const [deliveryOption, setDeliveryOption] = useState("standard");
 
   const deliveryCharge = deliveryOption === "standard" ? 6.99 : 0; // Set delivery charge based on selected option
 
   return (
-    <div className="xl:font-Playfair font-Poppins min-h-screen relative">
+    <div className=" font-Poppins min-h-screen relative">
       <ScrollTop />
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5">
         <div className="mt-20 xl:w-full xl:mt-20 xl:gap-5 flex flex-col-reverse xl:flex-row xl:justify-between gap-5 ">
           <div className="flex flex-col gap-2  xl:w-3/4">
-            <h1 className="text-xs underline font-serif">
+            <h1 className="text-sm underline font-serif">
               Login and Checkout faster
             </h1>
             <div className="flex flex-col gap-4">
@@ -33,7 +44,7 @@ export default function ViewCart() {
                 Contact Details
               </h1>
               <div className="flex flex-col gap-2">
-                <p className="text-xs font-medium">
+                <p className="text-sm font-medium">
                   We will use these details to keep you informed about your
                   delivery.
                 </p>
@@ -78,14 +89,14 @@ export default function ViewCart() {
                 <div
                   className={`flex p-4 justify-between rounded-2xl cursor-pointer ${
                     deliveryOption === "standard"
-                      ? "bg-white"
+                      ? "bg-[#F2F2F2] shadow-lg"
                       : "border border-black"
                   }`}
                   onClick={() => setDeliveryOption("standard")}
                 >
                   <div className="flex flex-col gap-1">
                     <h1 className="text-lg font-medium">Standard Delivery</h1>
-                    <p className="text-xs ">
+                    <p className="text-sm ">
                       Enter your address to see when you'll get your order
                     </p>
                   </div>
@@ -96,14 +107,14 @@ export default function ViewCart() {
                 <div
                   className={`flex p-4 justify-between rounded-2xl cursor-pointer ${
                     deliveryOption === "collect"
-                      ? "bg-white"
+                      ? "bg-[#F2F2F2]  shadow-lg"
                       : "border border-black"
                   }`}
                   onClick={() => setDeliveryOption("collect")}
                 >
                   <div className="flex flex-col gap-1">
                     <h1 className="text-lg font-medium">Collect in store</h1>
-                    <p className="text-xs ">Pay now, collect in store</p>
+                    <p className="text-sm ">Pay now, collect in store</p>
                   </div>
                   <div>
                     <h1 className="font-bold">Free</h1>
@@ -131,7 +142,7 @@ export default function ViewCart() {
                     I’m 13+ years old
                   </span>
                 </label>
-                <h1 className="text-xs font-semibold ">
+                <h1 className="text-sm font-semibold ">
                   Also want product updates with our newsletter?
                 </h1>
                 <label className="flex items-center gap-2 font-Poppins ">
@@ -152,8 +163,8 @@ export default function ViewCart() {
           </div>
 
           {/* ordersummery */}
-          <div className="flex flex-col-reverse xl:flex-col gap-3 xl:w-1/2  ">
-            <div className="bg-white p-5 rounded-2xl">
+          <div className="flex flex-col-reverse xl:flex-col gap-3 xl:w-1/2  xl:sticky xl:top-24 xl:h-1/2 ">
+            <div className="bg-[#F2F2F2] p-5 rounded-2xl">
               <h1 className="text-lg font-semibold tracking-wide ">
                 Order Summary
               </h1>
@@ -176,8 +187,8 @@ export default function ViewCart() {
                 </h1>
               </div>
             </div>
-            <div className="bg-white p-5 rounded-2xl xl:h-[55vh] overflow-hidden overflow-y-auto">
-              <h1 className="text-lg font-semibold tracking-wide  sticky top-0 bg-white">
+            <div className="bg-[#F2F2F2] p-5 rounded-2xl xl:h-[45vh] overflow-hidden overflow-y-auto">
+              <h1 className="text-lg font-semibold tracking-wide  sticky top-0 bg-[#F2F2F2]">
                 Order Details
               </h1>
               <div className="mt-3 flex flex-col justify-start items-start ">
@@ -196,18 +207,14 @@ export default function ViewCart() {
                       <div className="flex flex-col justify-center items-start p-2">
                         <h1 className="text-sm font-Poppins">{items.name}</h1>
                         <div className="flex justify-between items-center w-[150px] xl:w-[340px] gap-5">
-                          <p className="text-xs text-zinc-400">
+                          <p className="text-sm text-zinc-400">
                             Quantity: {items.quantity}
                           </p>
-                          <button
-                            onClick={() =>
-                              dispatch(productRemoveComplete(items.id))
-                            }
-                          >
+                          <button onClick={() => handleRemoveItem(items.id)}>
                             <Trash2 size={20} />
                           </button>
                         </div>
-                        <p className="text-sm text-orange-600 font-bold ">
+                        <p className="text-sm  font-bold ">
                           $ {(items.price * items.quantity).toFixed(2)}
                         </p>
                       </div>
@@ -219,6 +226,7 @@ export default function ViewCart() {
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { Gift, icons, ShoppingCart, Truck, Vegan } from "lucide-react";
 import React from "react";
+import ScrollTop from "../../utils/Scrolltop";
 
 export default function Service() {
   const service = [
@@ -25,7 +26,8 @@ export default function Service() {
     },
   ];
   return (
-    <div className="xl:font-Playfair font-Poppins ">
+    <div className="font-Poppins ">
+    <ScrollTop />
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5 gap-4">
         <h1 className="text-lg  border-l-2 border-black px-3 ">
           Our Story & Services

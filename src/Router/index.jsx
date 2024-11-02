@@ -10,6 +10,7 @@ import ViewCart from "../components/ViewCart";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
 import Listing from "../page/Listing";
+import Order from "../components/Order";
 const route = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +22,7 @@ const route = createBrowserRouter([
       { path: "/bakery-list", Component: Listing },
       { path: "/bakery-list/:id", Component: Product },
       { path: "/bakery-list/viewcart", Component: ViewCart },
+      { path: "/order_product", Component: Order },
       { path: "/login", Component: Login },
       { path: "/singup", Component: Signup },
     ],

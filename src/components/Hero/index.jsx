@@ -5,6 +5,7 @@ import "swiper/css";
 import { Link } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Bakeryss from "../../../Bakery.json";
+import ScrollTop from "../../utils/Scrolltop";
 
 function Hero() {
   const herobg = [
@@ -18,10 +19,11 @@ function Hero() {
   }
   
   return (
-    <div className="xl:font-Playfair font-Poppins pt-20 xl:pt-16">
+    <div className="font-Poppins pt-20 xl:pt-16">
+    <ScrollTop />
       <div className="flex xl:p-10 xl:justify-center xl:items-center flex-col ">
         <div className="relative flex flex-col justify-start items-start xl:gap-5 gap-2  p-5  xl:justify-center xl:items-center  ">
-          <h1 className="text-6xl xl:text-[5em] capitalize font-bold ">
+          <h1 className="font-Playfair text-6xl xl:text-[5em] capitalize font-bold  ">
             The ideal{" "}
             <span className="text-orange-600 relative inline-block">
               prepared

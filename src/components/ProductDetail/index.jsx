@@ -5,7 +5,7 @@ import Bakeryss from "../../../Bakery.json";
 import { productAdd } from "../../Redux/feature/Cart/CartSlice";
 import ScrollTop from "../../utils/Scrolltop";
 import { ChevronRight } from "lucide-react";
-
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ProductDetail() {
   const dispatch = useDispatch();
@@ -18,36 +18,41 @@ export default function ProductDetail() {
   }
 
   const handleAddToCart = () => {
-    dispatch(productAdd(product));
+    toast.success("Succers fully added", {
+      position: "bottom-left",
+    });
+    setTimeout(() => {
+      dispatch(productAdd(product));
+    }, 1000);
   };
   return (
-    <div className="xl:font-Playfair font-Poppins min-h-screen relative">
-    <ScrollTop/>
+    <div className=" font-Poppins min-h-screen relative">
+      <ScrollTop />
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5 ">
         <div className="mt-20  xl:w-full  xl:mt-20 xl:gap-2 flex flex-col ">
           {/* productinfo */}
-          <div className="xl:flex xl:justify-center xl:h-[60vh] ">
-            <div className="xl:h-[500px] xl:w-[630px]  ">
+          <div className="xl:flex xl:justify-around items-center xl:h-[70vh]  rounded-3xl">
+            <div className="xl:h-[500px]  xl:w-[630px] flex justify-center ">
               <img
                 src={product.img}
                 alt=""
-                className="h-[400px] object-contain"
+                className="xl:h-[460px] h-[320px]  object-contain"
               />
             </div>
-            <div className=" xl:p-5  flex flex-col gap-4 justify-start  xl:mt-10">
+            <div className=" xl:p-5  flex flex-col justify-center items-start   xl:w-1/2 gap-4 h-full  xl:mt-10 ">
               <h1 className="text-xl font-semibold">{product.name}</h1>
-              <h1 className="text-sm font-Poppins">{product.description}</h1>
+              <h1 className="text-sm font-Poppins ">{product.description}</h1>
               <div className="flex gap-2 font-Poppins justify-start items-center">
                 <h1 className="text-sm xl:text-base font-light line-through">
-                  $ {product.discount}
+                  $ {product.discount || 0.1}
                 </h1>
                 <h1 className="text-lg">$ {product.price}</h1>
               </div>
 
-              <div className="">
+              <div className="w-full xl:w-1/2 ">
                 <button
                   onClick={handleAddToCart}
-                  className="bg-black text-white px-12 py-3 rounded-2xl w-full"
+                  className="bg-black text-white px-12 py-3 rounded-2xl w-full  xl:w-full"
                 >
                   Add to cart
                 </button>
@@ -56,13 +61,14 @@ export default function ProductDetail() {
           </div>
           {/* recemondation */}
           <div className="flex justify-between items-end xl:items-center ">
-          <h1 className="text-xl xl:text-2xl  xl:font-bold border-l-2 border-black px-3 mt-10">
-            Best Recommendations
-          </h1>
-          <Link to={"/bakery-list"}>
-          <h1 className="underline font-Poppins xl:text-sm text-xs flex justify-center items-center ">more <ChevronRight size={15} />
-          </h1>
-          </Link>
+            <h1 className="text-xl xl:text-2xl  xl:font-bold border-l-2 border-black px-3 mt-10">
+              Best Recommendations
+            </h1>
+            <Link to={"/bakery-list"}>
+              <h1 className="underline font-Poppins xl:text-sm text-xs flex justify-center items-center ">
+                more <ChevronRight size={15} />
+              </h1>
+            </Link>
           </div>
           <div className="grid xl:grid-cols-4 grid-cols-2 xl:gap-3 xl:h-[40vh] gap-5 mt-3">
             {Bakeryss.sort(() => Math.random() - 0.5)
@@ -102,6 +108,7 @@ export default function ProductDetail() {
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }

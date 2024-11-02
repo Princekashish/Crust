@@ -1,8 +1,10 @@
 import React from "react";
+import ScrollTop from "../../utils/Scrolltop";
 
 export default function Testimonials() {
   return (
-    <div className="xl:font-Playfair font-Poppins ">
+    <div className=" font-Poppins ">
+    <ScrollTop />
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5">
         <div className="flex flex-col justify-start items-center xl:flex-row-reverse">
           <div className="flex flex-col gap-5 xl:w-1/2">

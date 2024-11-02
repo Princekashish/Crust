@@ -38,7 +38,7 @@ function Bakery() {
   });
 
   return (
-    <div className="xl:font-Playfair font-Poppins min-h-screen relative">
+    <div className=" font-Poppins min-h-screen relative">
       <ScrollTop />
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5">
         <div className="mt-20 xl:w-full xl:flex xl:justify-between xl:mt-10">
@@ -71,7 +71,7 @@ function Bakery() {
                     {categories.map((category) => (
                       <label
                         key={category}
-                        className="flex items-center gap-2 bg-[#FBFBFB] rounded-xl px-3 py-4 font-Poppins w-3/4"
+                        className="flex items-center gap-2 border border-black rounded-xl px-3 py-4 font-Poppins w-3/4"
                       >
                         <input
                           type="checkbox"
@@ -108,7 +108,7 @@ function Bakery() {
                     <img
                       src={items.img}
                       alt={items.name}
-                      className="object-contain h-[160px] w-[220px] backdrop-blur-2xl bg-gray-50 xl:bg-transparent rounded-2xl group-hover:scale-105 group-hover:duration-500"
+                      className="object-contain flex justify-center items-center h-[160px] w-[220px] backdrop-blur-2xl bg-gray-50 xl:bg-transparent rounded-2xl group-hover:scale-105 group-hover:duration-500"
                     />
                   </div>
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Bakeryss from "../../../Bakery.json";
 import { useNavigate } from "react-router-dom";
+import ScrollTop from "../../utils/Scrolltop";
 
 export default function Tranding() {
   const [filters, setFilters] = useState({});
@@ -18,7 +19,8 @@ export default function Tranding() {
   };
 
   return (
-    <div className="xl:font-Playfair font-Poppins ">
+    <div className=" font-Poppins ">
+    <ScrollTop />
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5">
         <div className="flex flex-col justify-start  gap-5 ">
           <h1 className="text-xl font-semibold border-l-2 border-black px-3">
@@ -39,8 +41,8 @@ export default function Tranding() {
                       className="object-contain group-hover:scale-105 group-hover:duration-500 h-[130px] xl:h-[300px]"
                     />
                   </div>
-                  <div className="flex  w-full  text-xs gap-5 group-hover:bg-white rounded-b-2xl xl:justify-center xl:items-center p-2 duration-500">
-                    <h1 className="xl:text-base font-semibold">{items.name}</h1>
+                  <div className="flex  w-full  text-xs gap-5 group-hover:bg-white  rounded-b-3xl xl:justify-center xl:items-center p-5 duration-500">
+                    <h1 className="xl:text-base font-semibold  w-full">{items.name}</h1>
                     <div className=" w-1/2 flex justify-center items-center">
                       <h1 className="xl:text-lg font-semibold ">
                         {items.price} $

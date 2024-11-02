@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Menu, Minus, Plus, ShoppingBasket, User, X } from "lucide-react";
+import { Menu, Minus, Plus, ShoppingBasket, ShoppingCart, User, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -72,13 +72,13 @@ export default function Header() {
       // initial={{ y: 0 }}
       // animate={{ y: isVisible ? 0 : -40 }} // Disable animation based on visibility
       // transition={{ duration: 0.3 }}
-      className={`p-2 fixed top-0 w-full z-50 `}
+      className={` fixed top-0 w-full z-50 `}
     >
       {/* mobile */}
       <div
-        className={`flex justify-between items-center p-5 bg-white relative ${
-          isOpen ? "rounded-t-3xl" : "rounded-3xl"
-        } xl:hidden `}
+        className={`flex justify-between items-center p-6 bg-white relative ${
+          isOpen ? "rounded-t-3xl" : "rounded-b-3xl"
+        } md:hidden `}
       >
         <div onClick={toggle} className="transition duration-500 ease-in-out">
           {isOpen ? (
@@ -93,7 +93,7 @@ export default function Header() {
         </div>
         <div>
           <Link to={"/"}>
-            <h1 className="text-lg font-bold tracking-wide">Crust</h1>
+            <h1 className="text-lg font-bold tracking-wide">Bakery Bound</h1>
           </Link>
         </div>
         <div className="flex justify-center items-center gap-2">
@@ -103,10 +103,10 @@ export default function Header() {
       </div>
 
       {/* disktop */}
-      <div className="hidden xl:block ">
+      <div className="hidden md:block ">
         <div className="flex justify-between items-center p-5 bg-white rounded-xl">
           <Link to={"/"}>
-            <h1 className="text-lg font-bold tracking-wide">Crust</h1>
+            <h1 className="text-lg font-bold tracking-wide">Bakery Bound</h1>
           </Link>
           <div className="flex justify-center items-center gap-5">
             {menu.map((item, index) => (
@@ -135,10 +135,10 @@ export default function Header() {
 
       {isOpen && (
         <motion.div
-          initial={{ y: -20, opacity: 0 }}
+          initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.4 }}
-          className="h-[50vh] bg-white rounded-b-2xl"
+          className="h-[30vh] bg-white rounded-b-2xl "
         >
           <div className="flex justify-center items-center gap-5 flex-col">
             {menu.map((item, index) => (
@@ -159,7 +159,7 @@ export default function Header() {
       {cart.length === 0 ? (
         ""
       ) : (
-        <h1 className="flex justify-center items-center bg-red-600 text-sm rounded-lg h-[20px] w-[20px] text-white absolute right-5  top-5 ">
+        <h1 className="flex justify-center items-center bg-red-600 text-sm rounded-lg h-[20px] w-[20px] text-white absolute right-3  top-3 ">
           {cart.length}
         </h1>
       )}
@@ -193,7 +193,7 @@ export default function Header() {
                     />
                   </div>
                 ) : (
-                  <div className="mt-7    xl:p-5 ">
+                  <div className="mt-7     xl:p-5 ">
                     <div className="flex flex-col justify-center gap-1   ">
                       {cart.map((item, index) => (
                         <div
@@ -241,7 +241,7 @@ export default function Header() {
                       ))}
                     </div>
 
-                    <div className="bg-green-800  sticky mt-5  bottom-0  w-full rounded-2xl">
+                    <div className="bg-green-800 sticky bottom-0    mt-5    rounded-2xl">
                       <div className="p-2">
                         <div className="flex justify-between items-center w-full gap-3  text-white rounded-xl p-2">
                           <div className="flex gap-2 justify-center items-center ">
@@ -275,10 +275,15 @@ export default function Header() {
           className="bg-white absolute  right-16 min-h-[5vh] p-2 flex-col flex gap-4   rounded-b-lg w-[120px] text-center duration-500 transition ease-in-out"
         >
           {userLoggedIn ? (
-            <h1 className="font-semibold text-orange-600">Order</h1>
+            <div className="flex flex-col gap-3">
+              <Link to={'/order_product'}>
+              <h1 className="font-semibold  flex justify-center items-center gap-2"><ShoppingCart /> Order</h1>
+              </Link>
+              <h1 className="font-semibold ">Log out</h1>
+            </div>
           ) : (
             <Link to={"/login"}>
-              <h1 className="font-semibold text-orange-600">Login</h1>
+              <h1 className="font-semibold ">Login</h1>
             </Link>
           )}
         </div>

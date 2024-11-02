@@ -11,9 +11,9 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="xl:font-Playfair font-Poppins p-5">
+    <div className=" font-Poppins p-5">
       <div className="flex xl:p-10  xl:items-start flex-col xl:flex-row xl:justify-between p-5 gap-4 bg-zinc-100 rounded-t-3xl">
-        <h1 className="text-[3em] font-bold tracking-wider">Crust</h1>
+        <h1 className="text-[3em] font-bold tracking-wider">Bound</h1>
         <div className="flex flex-col justify-start items-start gap-5 xl:gap-10 xl:flex-row ">
           <div className=" xl:w-[220px] flex flex-col gap-3">
             <h1 className="font-semibold xl:font-bold xl:text-xl">About us</h1>
