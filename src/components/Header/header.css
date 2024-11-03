@@ -1,0 +1,11 @@
+.desktop-navbar{
+
+display: block;
+
+}
+
+@media (max-width:768px) {
+    .desktop-navbar{
+display: none;
+    }
+}

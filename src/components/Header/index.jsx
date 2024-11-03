@@ -8,7 +8,7 @@ import {
   productRemove,
   selectCartTotal,
 } from "../../Redux/feature/Cart/CartSlice";
-
+import './header.css'
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [cartisOpen, setCartisOpen] = useState(false);
@@ -103,7 +103,7 @@ export default function Header() {
       </div>
 
       {/* disktop */}
-      <div className="hidden md:block ">
+      <div className="desktop-navbar ">
         <div className="flex justify-between items-center p-5 bg-white rounded-xl">
           <Link to={"/"}>
             <h1 className="text-lg font-bold tracking-wide">Bakery Bound</h1>
