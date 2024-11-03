@@ -5,7 +5,7 @@ import { productAdd } from "../../Redux/feature/Cart/CartSlice";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ListFilter, X } from "lucide-react";
 import ScrollTop from "../../utils/Scrolltop";
-
+import './bakery.css'
 function Bakery() {
   const [isOpen, setIsOpen] = useState(false);
   const [filters, setFilters] = useState({});
@@ -42,10 +42,10 @@ function Bakery() {
       <ScrollTop />
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5">
         <div className="mt-20 xl:w-full xl:flex xl:justify-between xl:mt-10">
-          <div className="flex justify-between items-end xl:hidden">
+          <div className="flex justify-between items-end md:hidden">
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="border border-black flex justify-center items-end gap-2 px-5 py-2 rounded-xl text-sm font-medium"
+              className="border border-black flex justify-center items-end gap-2 px-5 py-2 rounded-xl text-sm font-medium "
             >
               Filter
               <ListFilter size={20} />
@@ -55,8 +55,8 @@ function Bakery() {
             </p>
           </div>
 
-          <div className="h-[50vh] sticky top-28 hidden xl:block">
-            <div className="flex flex-col p-2">
+          <div className="z-30 xl:h-[50vh]  xl:sticky top-28  desktop">
+            <div className="flex flex-col p-2 ">
               <h1 className="text-neutral-800 text-xl font-semibold">
                 Bakery Products
               </h1>
@@ -64,10 +64,10 @@ function Bakery() {
                 {filteredProducts.length} items
               </p>
             </div>
-            <div className="flex justify-center gap-5">
-              <div className="hidden xl:block mt-5">
-                <div className="w-[315px] sticky top-0 flex flex-col gap-5">
-                  <div className="flex flex-col gap-2">
+            <div className="flex justify-center gap-5 ">
+              <div className=" xl:block mt-5 ">
+                <div className="w-[315px]  sticky top-0 flex flex-col gap-5">
+                  <div className="flex xl:flex-col gap-2">
                     {categories.map((category) => (
                       <label
                         key={category}
