@@ -6,8 +6,10 @@ import toast, { Toaster } from "react-hot-toast";
 import {
   selectCartTotal,
   productRemoveComplete,
+  clearCart,
 } from "../../Redux/feature/Cart/CartSlice";
 import { useNavigate } from "react-router-dom";
+import { saveOrderDetails } from "../../Redux/feature/Order/OrderSlice";
 
 export default function ViewCart() {
   const price = useSelector(selectCartTotal);
@@ -20,7 +22,7 @@ export default function ViewCart() {
       position: "bottom-center",
     });
 
-    setTimeout(() => {  
+    setTimeout(() => {
       dispatch(productRemoveComplete(itemId));
     }, 500);
   };
@@ -29,6 +31,15 @@ export default function ViewCart() {
   const [deliveryOption, setDeliveryOption] = useState("standard");
 
   const deliveryCharge = deliveryOption === "standard" ? 6.99 : 0; // Set delivery charge based on selected option
+  const handleReviewAndPay = () => {
+    const orderDetails = {
+      orderhistory: cart,
+    };
+    dispatch(saveOrderDetails(orderDetails));
+    console.log("Order details being saved:", orderDetails);
+    dispatch(clearCart());
+    navigate("/order_product");
+  };
 
   return (
     <div className=" font-Poppins min-h-screen relative">
@@ -156,7 +167,10 @@ export default function ViewCart() {
                   </span>
                 </label>
               </div>
-              <button className="bg-black py-4 rounded-lg text-white flex uppercase px-4 items-center justify-between xl:w-[202px] xl:py-2">
+              <button
+                onClick={handleReviewAndPay}
+                className="bg-black py-4 rounded-lg text-white flex uppercase px-4 items-center justify-between xl:w-[202px] xl:py-2"
+              >
                 Review AND PAY <ArrowRight size={18} />
               </button>
             </div>

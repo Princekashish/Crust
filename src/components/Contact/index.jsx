@@ -34,7 +34,7 @@ function Contact() {
     e.preventDefault();
     if (validateForm()) {
       // Form is valid, proceed with submission
-      console.log(JSON.stringify(formData)); // Print form data in JSON format
+    
       // Add your form submission logic here
       setFormData({
         firstName: "",

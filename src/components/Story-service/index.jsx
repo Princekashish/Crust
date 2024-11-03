@@ -46,7 +46,7 @@ export default function Service() {
           <div className="grid grid-cols-2 gap-3 ">
             {service.map((items, i) => {
               return (
-                <div className="bg-white flex justify-center items-center flex-col p-4 gap-2 rounded-2xl">
+                <div key={i} className="bg-white flex justify-center items-center flex-col p-4 gap-2 rounded-2xl">
                   <h1>{items.icons}</h1>
 
                   <h1 className="font-semibold ">{items.text}</h1>

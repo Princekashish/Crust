@@ -18,7 +18,7 @@ function Bakery() {
     dispatch(productAdd(item));
   };
 
-  console.log(isOpen);
+ 
 
   const handleFilterChange = (e) => {
     setFilters({

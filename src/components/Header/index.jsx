@@ -15,12 +15,12 @@ export default function Header() {
   const [userisOpen, setUserisOpen] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const [userLoggedIn, setuserLoggedIn] = useState(false);
+  const [userLoggedIn, setuserLoggedIn] = useState(true);
   const cart = useSelector((pre) => pre.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  console.log(userisOpen);
+
 
   const price = useSelector(selectCartTotal);
 

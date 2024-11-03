@@ -29,7 +29,7 @@ export default function Tranding() {
           <div className="grid grid-cols-2 gap-4 xl:grid-cols-4 xl:gap-5 ">
             {Bakeryss.slice(0, 4).map((items, i) => {
               return (
-                <div className=" relative gap-4  flex flex-col justify-between items-center font-Poppins group ">
+                <div key={i} className=" relative gap-4  flex flex-col justify-between items-center font-Poppins group ">
                   <div>
                     <h1 className="absolute top-2 bg-red-600 text-white text-sm z-10 px-2 rounded">
                       {items.discount || 0.01}% off
@@ -63,7 +63,7 @@ export default function Tranding() {
           <div className="grid grid-cols-2 gap-4 xl:grid-cols-4 xl:gap-5 mt-5">
             {uniqueCategories.map((items, i) => {
               return (
-                <div
+                <div key={i}
                   onClick={() => handleCategoryClick(items)}
                   className=" relative gap-4 flex flex-col justify-between items-center font-Poppins group bg-white rounded-2xl xl:p-4"
                 >

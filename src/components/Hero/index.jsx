@@ -69,7 +69,7 @@ function Hero() {
           >
             {herobg.map((items, i) => {
               return (
-                <div>
+                <div key={i}>
                  
                  <SwiperSlide onClick={handlenavigate} className="relative ">
                     <img
