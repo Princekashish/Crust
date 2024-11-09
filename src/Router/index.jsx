@@ -11,6 +11,10 @@ import Login from "../components/Login";
 import Signup from "../components/Signup";
 import Listing from "../page/Listing";
 import Order from "../components/Order";
+import Admin from "../components/admin/Admin";
+import Dashboard from "../components/admin/Dashboard";
+import AdminOrder from "../components/admin/Order";
+import AdminProduct from "../components/admin/Products";
 const route = createBrowserRouter([
   {
     path: "/",
@@ -27,7 +31,16 @@ const route = createBrowserRouter([
       { path: "/singup", Component: Signup },
     ],
   },
- 
+  {
+    path: "/admin",
+    Component: Admin,
+    children:[
+      {path:'/admin/dashboard',Component:Dashboard},
+      {path:'/admin/order',Component:AdminOrder},
+      {path:'/admin/product',Component:AdminProduct},
+    ]
+
+  },
 ]);
 
 function Router() {

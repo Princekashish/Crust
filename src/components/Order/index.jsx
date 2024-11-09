@@ -39,9 +39,9 @@ export default function Order() {
               filteredOrders.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center justify-around shadow-sm bg-[#F2F2F2] rounded-2xl p-2 gap-3"
+                  className="flex items-center justify-around shadow-sm bg-[#F2F2F2] rounded-2xl p-2 gap-3 xl:h-[15vh]"
                 >
-                  <img src={item.img} alt="" className="h-[70px]" />
+                  <img src={item.img} alt="" className="h-[80px]" />
                   <div className="w-1/2 xl:w-3/4">
                     <h1 className="text-sm font-semibold">{item.name}</h1>
                     <div className="flex items-end justify-between">
