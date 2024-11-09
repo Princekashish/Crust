@@ -298,7 +298,7 @@ export default function Product() {
           </div>
 
           <div className="flex w-full sticky top-0">
-            <div className="bg-white w-full h-screen rounded-xl p-5">
+            <div className="bg-white w-full h-screen rounded-xl p-5  overflow-hidden overflow-y-scroll">
               <h1 className="text-2xl mb-4">Product List</h1>
 
               {/* Table for Product Data */}
