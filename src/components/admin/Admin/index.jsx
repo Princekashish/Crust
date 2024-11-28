@@ -32,7 +32,7 @@ export default function Admin() {
           <div className="flex justify-center items-center gap-5">
             <AlignJustify onClick={() => setIsOpen((prev) => !prev)} />
             <h1 className="text-2xl leading-none tracking-tighter font-bold text-orange-600">
-              Bakery Boundy
+              Crusty
             </h1>
           </div>
           <div className="flex gap-5 items-center justify-center">
@@ -56,7 +56,7 @@ export default function Admin() {
             className="flex flex-col gap-3 p-5 h-screen text-xl bg-white xl:w-[320px]"
           >
             <h1 className="text-2xl leading-none tracking-tighter mt-2 font-bold text-orange-600">
-              Bakery Boundy
+              Crusty
             </h1>
             {/* Dashboard Link */}
             <NavLink

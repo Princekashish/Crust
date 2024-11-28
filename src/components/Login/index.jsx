@@ -79,8 +79,8 @@ export default function Login() {
               </p>
             </Link>
             <h1 className="text-xs font-medium">
-              By clicking 'Log In' you agree to our website Bakery BoundClub Terms &
-              Conditions, Bakery Bound Privacy Notice and Terms & Conditions.
+              By clicking 'Log In' you agree to our website CrustClub Terms &
+              Conditions, Crust Privacy Notice and Terms & Conditions.
             </h1>
           </div>
         </div>

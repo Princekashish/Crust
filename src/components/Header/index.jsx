@@ -15,7 +15,7 @@ export default function Header() {
   const [userisOpen, setUserisOpen] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const [userLoggedIn, setuserLoggedIn] = useState(true);
+  const [userLoggedIn, setuserLoggedIn] = useState(false);
   const cart = useSelector((pre) => pre.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -93,7 +93,7 @@ export default function Header() {
         </div>
         <div>
           <Link to={"/"}>
-            <h1 className="text-lg font-bold tracking-wide">Bakery Bound</h1>
+            <h1 className="text-lg font-bold tracking-wide">Crust</h1>
           </Link>
         </div>
         <div className="flex justify-center items-center gap-2">
@@ -106,7 +106,7 @@ export default function Header() {
       <div className="desktop-navbar ">
         <div className="flex justify-between items-center p-5 bg-white rounded-xl">
           <Link to={"/"}>
-            <h1 className="text-lg font-bold tracking-wide">Bakery Bound</h1>
+            <h1 className="text-lg font-bold tracking-wide">Crust</h1>
           </Link>
           <div className="flex justify-center items-center gap-5">
             {menu.map((item, index) => (

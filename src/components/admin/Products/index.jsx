@@ -80,7 +80,7 @@ export default function Product() {
       rating: 4.8,
       discount: 1.0,
       description:
-        "Artisan sourdough with a crispy Bakery Bound and tangy flavor.",
+        "Artisan sourdough with a crispy Crust and tangy flavor.",
       category: "Breads",
     },
     {

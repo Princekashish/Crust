@@ -137,8 +137,8 @@ export default function Signup() {
               <label className="flex items-center gap-2 font-Poppins ">
                 <input type="checkbox" className="form-checkbox border-none" />
                 <span className="ml-3 block text-sm font-medium text-gray-700">
-                  By clicking 'Log In' you agree to our website Bakery BoundClub Terms
-                  & Conditions, Bakery Bound Privacy Notice and Terms & Conditions.
+                  By clicking 'Log In' you agree to our website CrustClub Terms
+                  & Conditions, Crust Privacy Notice and Terms & Conditions.
                   info
                 </span>
               </label>

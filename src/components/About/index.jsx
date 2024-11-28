@@ -9,7 +9,7 @@ export default function About() {
       <div className="flex xl:p-10 xl:justify-start xl:items-start flex-col p-5">
         <div className="relative mt-20 xl:mt-0 xl:w-full flex flex-col  gap-16">
           <h1 className="xl:text-[16em] text-[6em] font-Poppins tracking-wider opacity-5 absolute">
-            Bakery Bound
+            Crust
           </h1>
           <div className=" xl:mt-20 flex flex-col justify-start items-center gap-10 xl:flex-row xl:justify-around xl:items-start xl:gap-10">
             <div className="flex flex-col justify-start items-start gap-5 xl:w-1/2">
@@ -17,7 +17,7 @@ export default function About() {
                 About us
               </h1>
               <p className="font-Poppins">
-                At Bakery Bound Bakery Delight, we are passionate about creating
+                At Crust Bakery Delight, we are passionate about creating
                 delicious bakery treats that will make your taste buds dance
                 with joy. We offer a wide variety of delightful goodies,
                 including cakes, cupcakes, milkshakes, donuts, croissants, and
