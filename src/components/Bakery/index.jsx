@@ -5,7 +5,7 @@ import { productAdd } from "../../Redux/feature/Cart/CartSlice";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ListFilter, X } from "lucide-react";
 import ScrollTop from "../../utils/Scrolltop";
-import './bakery.css'
+import "./bakery.css";
 function Bakery() {
   const [isOpen, setIsOpen] = useState(false);
   const [filters, setFilters] = useState({});
@@ -17,8 +17,6 @@ function Bakery() {
   const handleAddToCart = (item) => {
     dispatch(productAdd(item));
   };
-
- 
 
   const handleFilterChange = (e) => {
     setFilters({
